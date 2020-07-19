@@ -8,9 +8,7 @@ from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
 from keras.preprocessing import image
 from keras.models import load_model
-import tensorflow as tf
 import numpy as np
-import cv2
 import os
 from PIL import Image
 
