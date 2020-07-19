@@ -1,6 +1,6 @@
 
 app==0.0.1
-
+joblib==0.14.0
 Flask==0.10.1
 
 gunicorn==19.9.0
@@ -14,7 +14,6 @@ Keras-Preprocessing==1.1.0
 
 numpy==1.17.3
 
-opencv-python==4.1.1.26
 
 
 
