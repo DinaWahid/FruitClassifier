@@ -1,2 +1,2 @@
-web gunicorn Fruitada_App:app --preload --workers 1
+web gunicorn Fruitada_App:app 
 heroku ps:scale web=1
