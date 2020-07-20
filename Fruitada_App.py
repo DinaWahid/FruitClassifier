@@ -18,9 +18,9 @@ app = Flask(__name__)
 
 #loading the trained models
 K.clear_session()
-model_fruit = load_model('models/fruits-classifier-model.h5')
+model_fruit = load_model('models/fruits-classifier-model.h5', compile=False)
 K.clear_session()
-model_orange = load_model("models/oranges-classifier-model.h5")
+model_orange = load_model("models/oranges-classifier-model.h5", compile=False)
 
 
 #setting the size to which the images will be resized and the batch size
