@@ -17,7 +17,9 @@ app = Flask(__name__)
 
 
 #loading the trained models
+K.clear_session()
 model_fruit = load_model('models/fruits-classifier-model.h5')
+K.clear_session()
 model_orange = load_model("models/oranges-classifier-model.h5")
 
 
@@ -133,7 +135,6 @@ def upload():
         images = np.vstack([x])
 
         #predicting the class of the image fed into the model then returning the result
-        K.clear_session()
         classes_fruit = model_fruit.predict_classes(images, batch_size=10)
         predictions.append(classes_fruit)
         result = class_labels_fruit[predictions[0][0]]
@@ -164,7 +165,6 @@ def upload2():
         x = np.expand_dims(x, axis=0)
         images = np.vstack([x])
         # predicting the class of the image fed into the model then returning the result
-        K.clear_session()
         classes_2 = model_orange.predict_classes(images, batch_size=10)
         predictions.append(classes_2)
         result = class_labels_orange[predictions[0][0]]
